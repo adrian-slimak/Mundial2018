@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "178678035910",
+    "firebase_url": "https://mundial2018-8aaf2.firebaseio.com",
+    "project_id": "mundial2018-8aaf2",
+    "storage_bucket": "mundial2018-8aaf2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178678035910:android:a55706d5ee1b5089",
+        "android_client_info": {
+          "package_name": "com.example.adek.mundial2018"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "178678035910-jccbtkbkefek4bpk24rkef57g5t0eiao.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.adek.mundial2018",
+            "certificate_hash": "ecfe8f5344dc52f3c19a8687685ec322ecf64bba"
+          }
+        },
+        {
+          "client_id": "178678035910-jc6cvfucglm3rji3bn65mmsf5o23h25c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCT7T1rw55I4N1Oy7cQivcqIhIp6QsSaU8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "178678035910-jc6cvfucglm3rji3bn65mmsf5o23h25c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
