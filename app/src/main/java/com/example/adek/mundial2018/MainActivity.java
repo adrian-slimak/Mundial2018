@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity
 {
     TextView mTextView;
     Context mContext;
-    String mJSONURLString = "http://livescore-api.com/api-client/scores/live.json?key=he0S3YVbJApEcWre&secret=rAOqB5MzLfsOmPwD3ww7vsie2ITeFls6&league=5";
+    String mJSONURLString = "http://livescore-api.com/api-client/scores/live.json?key=he0S3YVbJApEcWre&secret=rAOqB5MzLfsOmPwD3ww7vsie2ITeFls6";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -69,9 +69,10 @@ public class MainActivity extends AppCompatActivity
                                 String away = match.getString("away_name");
                                 String time = match.getString("time");
                                 String score = match.getString("score");
+                                String status = match.getString("status");
 
                                 // Display the formatted json data in text view
-                                mTextView.append(home +" - " + away +"\nscore : " + score +"\ntime : " + time);
+                                mTextView.append(home +" - " + away +"\nscore : " + score +"\ntime : " + time + "\nstatus : "+status);
                                 mTextView.append("\n\n");
                             }
                         }catch (JSONException e){
@@ -88,35 +89,5 @@ public class MainActivity extends AppCompatActivity
         );
 
         requestQueue.add(jsonObjectRequest);
-    }
-
-    public String getHttpString()
-    {
-        String result = "";
-        JSONObject json ;
-        try {
-            json = getJSONObjectFromURL("http://livescore-api.com/api-client/scores/live.json?key=he0S3YVbJApEcWre&secret=rAOqB5MzLfsOmPwD3ww7vsie2ITeFls6&league=5");
-
-            JSONArray arr = json.getJSONArray("match");
-
-            for (int i = 0; i < arr.length(); i++)
-            {
-                result += arr.getJSONObject(i).getString("host_name") + " / ";
-                result += arr.getJSONObject(i).getString("away_name") + " / ";
-                result += arr.getJSONObject(i).getString("score") + " ";
-                result += arr.getJSONObject(i).getString("time");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        return result;
-    }
-
-    public static JSONObject getJSONObjectFromURL(String urlString) throws IOException, JSONException
-    {
-        return null;
     }
 }
